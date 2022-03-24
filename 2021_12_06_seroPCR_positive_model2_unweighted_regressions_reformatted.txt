@@ -1,0 +1,75 @@
+cohort	outcome	Ref	exposure 	adjustments	Grouping	Order	coef	coef_se	lower_ci	upper_ci	n
+TwinsUK	12+ weeks	0-12 weeks	sex(femalevmale)	"model3(age, ethnicity)"	Sex	14	3.8561817	0.74168273	1.129983245	24.178147	377
+TwinsUK	12+ weeks	0-12 weeks	age(45-69+vs18-44)	"model3(age, ethnicity)"	Age	13	1.62411841	0.3697719	0.809489364	3.4939417	377
+TwinsUK	12+ weeks	0-12 weeks	age(70+vs18-44)	"model3(sex, ethnicity)"	Age	12	0.82493594	0.6169684	0.217224322	2.5943336	377
+TwinsUK	12+ weeks	0-12 weeks	eth(ethminorityvswhite)	"see model2(sex, age)"	Ethnicity	11	0.3863826	1.04578132	0.021099926	1.9830541	377
+TwinsUK	12+ weeks	0-12 weeks	edu(no degreevsdegree)	"model3(age, sex, ethnicity)"	Education	10	0.35445086	0.40379078	0.151972817	0.7519036	297
+TwinsUK	12+ weeks	0-12 weeks	IMD	"model3(age, sex, ethnicity)"	SEP	9	0.9591857	0.09263837	0.800331	1.15172	376
+TwinsUK	12+ weeks	0-12 weeks	s-r health(poorvsgood)	"model3(age, sex, ethnicity)"	Gen_health	8	0.7945849	0.79226464	0.11938127	3.142113	226
+TwinsUK	12+ weeks	0-12 weeks	pre-pandemic mh score	"model3(age, sex, ethnicity)"	M_Health	7	1.01707865	0.03743275	0.9422113	1.092739	158
+TwinsUK	12+ weeks	0-12 weeks	pre-pandemic mh (casevscontrol)	"model3(age, sex, ethnicity)"	M_Health	6	0.467921637	1.06898661	0.02499645	2.585993	165
+TwinsUK	12+ weeks	0-12 weeks	bmi score 	"model3(age, sex, ethnicity)"	BMI	5	0.991933921	0.04711047	0.8994472	1.083476	175
+TwinsUK	12+ weeks	0-12 weeks	bmi (overweight/obesevsnormal)	"model3(age, sex, ethnicity)"	Overweight_obese	4	1.80807046	0.50377843	0.69397494	5.1373	175
+TwinsUK	12+ weeks	0-12 weeks	hypertension (yesvsno)	"model3(age, sex, ethnicity)"	Hypertension	3	1.34505797	0.49058017	0.484502182	3.3978953	275
+TwinsUK	12+ weeks	0-12 weeks	cholesterol (yesvsno)	"model3(age, sex, ethnicity)"	Cholesterol	2	0.742078351	0.55042865	0.227555092	2.0442415	276
+TwinsUK	12+ weeks	0-12 weeks	asthma (yesvsno)	"model3(age, sex, ethnicity)"	Asthma	1	0.852071	0.570412	0.25383	2.473302	139
+TwinsUK	4-12+ weeks	0-4 weeks	sex(femalevmale)	"model3(age, ethnicity)"	Sex	14	1.8246918	0.378454854	0.8996545	4.0246389	377
+TwinsUK	4-12+ weeks	0-4 weeks	age(45-69+vs18-44)	"model3(sex, ethnicity)"	Age	13	1.1588537	0.2534639	0.70851763	1.9180527	377
+TwinsUK	4-12+ weeks	0-4 weeks	age(70+vs18-44)	"model3(sex, ethnicity)"	Age	12	0.4915336	0.4466058	0.19367337	1.1367877	377
+TwinsUK	4-12+ weeks	0-4 weeks	eth(ethminorityvswhite)	"see model2(age, sex)"	Ethnicity	11	0.4691547	0.652474385	0.1057576	1.4968342	377
+TwinsUK	4-12+ weeks	0-4 weeks	edu(no degreevsdegree)	"model3(age, sex, ethnicity)"	Education	10	0.57024	0.280748902	0.32499454	0.9799465	297
+TwinsUK	4-12+ weeks	0-4 weeks	IMD	"model3(age, sex, ethnicity)"	SEP	9	0.9591857	0.09263837	0.800331	1.15172	376
+TwinsUK	4-12+ weeks	0-4 weeks	s-r health(poorvsgood)	"model3(age, sex, ethnicity)"	Gen_health	8	0.5717335	0.67635029	0.1248735	1.944673	226
+TwinsUK	4-12+ weeks	0-4 weeks	pre-pandemic mh score	"model3(age, sex, ethnicity)"	M_Health	7	1.0329845	0.03065258	0.97207376	1.097129	158
+TwinsUK	4-12+ weeks	0-4 weeks	pre-pandemic mh (casevscontrol)	"model3(age, sex, ethnicity)"	M_Health	6	2.3936342	0.61098885	0.70400309	8.139757	165
+TwinsUK	4-12+ weeks	0-4 weeks	bmi score	"model3(age, sex, ethnicity)"	BMI	5	0.9790118	0.03384206	0.91413881	1.0448042	175
+TwinsUK	4-12+ weeks	0-4 weeks	bmi (overweight/obesevsnormal)	"model3(age, sex, ethnicity)"	Overweight_obese	4	1.1264452	0.34195507	0.57871017	2.2216692	175
+TwinsUK	4-12+ weeks	0-4 weeks	hypertension (yesvsno)	"model3(age, sex, ethnicity)"	Hypertension	3	2.0519801	0.37893967	0.96671235	4.305019	275
+TwinsUK	4-12+ weeks	0-4 weeks	cholesterol (yesvsno)	"model3(age, sex, ethnicity)"	Cholesterol	2	0.6567285	0.4264287	0.271270885	1.4669616	276
+TwinsUK	4-12+ weeks	0-4 weeks	asthma (yesvsno)	"model3(age, sex, ethnicity)"	Asthma	1	0.443635	0.50044	0.155173	1.128584	139
+ALSPAC G1	12+ weeks	0-12 weeks	sex(femalevmale)	"model3(age,sex, eth)"	Sex	10	2.489962467	1.605042148	0.70388882	8.808085759	193
+ALSPAC G1	12+ weeks	0-12 weeks	eth(ethminorityvswhite)	"model3(age,sex, eth)"	Ethnicity	9	7.17E-01	0.773598063	0.086704472	5.94E+00	193
+ALSPAC G1	12+ weeks	0-12 weeks	edu(no degreevsdegree)	"model3(age,sex, eth)"	Education	8	1.39E-01	0.145803077	0.017802047	1.09E+00	150
+ALSPAC G1	12+ weeks	0-12 weeks	IMD	"model3(age,sex, eth)"	SEP	7	0.708060292	0.165170544	0.448238205	1.118488723	183
+ALSPAC G1	12+ weeks	0-12 weeks	pre-pandemic mh score	"model3(age,sex, eth)"	M_Health	6	1.327358828	0.380405408	0.756909585	2.327730408	104
+ALSPAC G1	12+ weeks	0-12 weeks	pre-pandemic mh (casevscontrol)	"model3(age,sex, eth)"	M_Health	5	1.470588348	1.056985092	0.359492782	6.015781669	104
+ALSPAC G1	12+ weeks	0-12 weeks	bmi score 	"model3(age,sex, eth)"	BMI	4	1.016098849	0.052991821	0.917368663	1.125454699	146
+ALSPAC G1	12+ weeks	0-12 weeks	bmi (overweight/obesevsnormal)	"model3(age,sex, eth)"	Overweight_obese	3	1.477559244	0.724835121	0.564907534	3.864670215	144
+ALSPAC G1	12+ weeks	0-12 weeks	asthma (yesvsno)	"model3(age,sex, eth)"	Asthma	2	0.633071708	0.43430116	0.165009848	2.428823442	140
+ALSPAC G1	12+ weeks	0-12 weeks	smoking(yesvsno)	"model3(age,sex, eth)"	Smoking	1	7.77E-01	0.613977745	0.165181427	3.66E+00	168
+ALSPAC G1	4-12+ weeks	0-4 weeks	sex(femalevmale)	"model3(age,sex, eth)"	Sex	11	2.122835268	0.956822587	0.877516734	5.135434347	193
+ALSPAC G1	4-12+ weeks	0-4 weeks	eth(ethminorityvswhite)	"model3(age,sex, eth)"	Ethnicity	10	1.26039596	0.889036337	0.316301431	5.022417924	193
+ALSPAC G1	4-12+ weeks	0-4 weeks	edu(no degreevsdegree)	"model3(age,sex, eth)"	Education	9	0.410140067	0.216698484	0.145612222	1.155224968	150
+ALSPAC G1	4-12+ weeks	0-4 weeks	IMD	"model3(age,sex, eth)"	SEP	8	1.005390537	0.154028954	0.744608641	1.357505239	183
+ALSPAC G1	4-12+ weeks	0-4 weeks	s-r health(poorvsgood)	"model3(age,sex, eth)"	Gen_health	7	3.70E-01	0.403033739	0.04384234	3.13E+00	159
+ALSPAC G1	4-12+ weeks	0-4 weeks	pre-pandemic mh score	"model3(age,sex, eth)"	M_Health	6	1.228066824	0.256715655	0.815241794	1.849939656	143
+ALSPAC G1	4-12+ weeks	0-4 weeks	pre-pandemic mh (casevscontrol)	"model3(age,sex, eth)"	M_Health	5	1.350377484	0.680125657	0.503202123	3.623830797	143
+ALSPAC G1	4-12+ weeks	0-4 weeks	bmi score	"model3(age,sex, eth)"	BMI	4	1.013202782	0.043275152	0.93183817	1.101671847	146
+ALSPAC G1	4-12+ weeks	0-4 weeks	bmi (overweight/obesevsnormal)	"model3(age,sex, eth)"	Overweight_obese	3	1.110633737	0.443612683	0.507669847	2.42974308	144
+ALSPAC G1	4-12+ weeks	0-4 weeks	asthma (yesvsno)	"model3(age,sex, eth)"	Asthma	2	1.0642856	0.513758109	0.413200889	2.741290906	140
+ALSPAC G1	4-12+ weeks	0-4 weeks	smoking (yesvsno)	"model3(age,sex, eth)"	Smoking	1	5.32E-01	0.350733176	0.146013608	1.94E+00	168
+ALSPAC G0	12+ weeks	0-12 weeks	age (55-59 vs 45-54)	"model2(age,sex,)"	Age	12	2.045453	2.382374	0.208632	20.05388	47
+ALSPAC G0	12+ weeks	0-12 weeks	age (60-76 vs 45-54)	"model2(age,sex,)"	Age	11	2.249999	2.964634	0.1700693	29.76725	47
+ALSPAC G0	12+ weeks	0-12 weeks	edu(no degreevsdegree)	"model2(age,sex,)"	Education	10	0.236864269	0.258256768	0.027952546	2.007140312	46
+ALSPAC G0	12+ weeks	0-12 weeks	IMD	"model2(age,sex,)"	SEP	9	1.850900788	0.611873408	0.96825941	3.538136258	35
+ALSPAC G0	12+ weeks	0-12 weeks	s-r health(poorvsgood)	"model2(age,sex,)"	Gen_health	8	10.07160019	10.55161562	1.292196076	78.49979756	42
+ALSPAC G0	12+ weeks	0-12 weeks	pre-pandemic mh score	"model2(age,sex,)"	M_Health	7	1.259900281	0.565314564	0.522882201	3.035767356	42
+ALSPAC G0	12+ weeks	0-12 weeks	pre-pandemic mh (casevscontrol)	"model2(age,sex,)"	M_Health	6	1.627147746	2.048304741	0.1380091	19.18431309	42
+ALSPAC G0	12+ weeks	0-12 weeks	bmi score 	"model2(age,sex,)"	BMI	5	0.925580866	0.095136242	0.756699135	1.132153982	23
+ALSPAC G0	12+ weeks	0-12 weeks	bmi (overweight/obesevsnormal)	"model2(age,sex,)"	Overweight_obese	4	0.773466535	0.874639354	0.084313882	7.095515778	23
+ALSPAC G0	12+ weeks	0-12 weeks	hypertension (yesvsno)	"model2(age,sex,)"	Hypertension	3	0.763880417	0.912914271	0.073409715	7.948720306	42
+ALSPAC G0	12+ weeks	0-12 weeks	cholesterol (yesvsno)	"model2(age,sex,)"	Cholesterol	2	4.24E+00	4.512534562	0.525479154	3.42E+01	42
+ALSPAC G0	12+ weeks	0-12 weeks	smoking (yesvsno)	"model2(age,sex,)"	Smoking	1	0.821809069	0.822407138	0.115597895	5.842408669	42
+ALSPAC G0	4-12+ weeks	0-4 weeks	sex(femalevmale)	"model2(age,sex,)"	Sex	13	1.06120623	0.962074874	0.17951976	6.273173858	57
+ALSPAC G0	4-12+ weeks	0-4 weeks	age (55-59 vs 45-54)	"model2(age,sex,)"	Age	12	1.579652	1.411816	0.2740307	9.105916	57
+ALSPAC G0	4-12+ weeks	0-4 weeks	age (60-76 vs 45-54)	"model2(age,sex,)"	Age	11	0.627512	0.7121891	0.0678514	5.803441	57
+ALSPAC G0	4-12+ weeks	0-4 weeks	edu(no degreevsdegree)	"model2(age,sex,)"	Education	10	0.220959805	0.211043134	0.033987064	1.436524091	55
+ALSPAC G0	4-12+ weeks	0-4 weeks	IMD	"model2(age,sex,)"	SEP	9	1.436056647	0.384494674	0.849704631	2.427030073	53
+ALSPAC G0	4-12+ weeks	0-4 weeks	s-r health(poorvsgood)	"model2(age,sex,)"	Gen_health	8	4.741668986	4.5623785	0.719308269	31.25700864	50
+ALSPAC G0	4-12+ weeks	0-4 weeks	pre-pandemic mh score	"model2(age,sex,)"	M_Health	7	1.421296411	0.556214255	0.660044143	3.06052786	51
+ALSPAC G0	4-12+ weeks	0-4 weeks	pre-pandemic mh (casevscontrol)	"model2(age,sex,)"	M_Health	6	1.102682986	1.390782789	0.093079555	13.06312398	51
+ALSPAC G0	4-12+ weeks	0-4 weeks	bmi score	"model2(age,sex,)"	BMI	5	0.923506273	0.0829899	0.774368247	1.101367261	27
+ALSPAC G0	4-12+ weeks	0-4 weeks	bmi (overweight/obesevsnormal)	"model2(age,sex,)"	Overweight_obese	4	0.817960396	0.848045735	0.107206904	6.240822038	27
+ALSPAC G0	4-12+ weeks	0-4 weeks	hypertension (yesvsno)	"model2(age,sex,)"	Hypertension	3	0.384980338	0.443710667	0.040214504	3.685482707	49
+ALSPAC G0	4-12+ weeks	0-4 weeks	cholesterol (yesvsno)	"model2(age,sex,)"	Cholesterol	2	2.162144608	2.187671796	0.297600427	15.70854366	42
+ALSPAC G0	4-12+ weeks	0-12 weeks	smoking (yesvsno)	"model2(age,sex,)"	Smoking	1	1.447452226	1.145704912	0.306796843	6.829007514	51

@@ -1,0 +1,27 @@
+Group	Measure	k	or	lci	uci
+Sex	LS meta-analysis	9	1.491957368	1.244316566	1.78888303
+Sex	OpenSAFELY		1.507213	1.414828	1.605631
+Ethnicity (ref. white in all)	Combined non-white (LS meta-analysis)	7	0.804091066	0.544462149	1.187525055
+Ethnicity (ref. white in all)	Mixed (OpenSAFELY)		1.010951	0.761292	1.342482
+Ethnicity (ref. white in all)	South Asian (OpenSAFELY)		0.75366	0.672645	0.844433
+Ethnicity (ref. white in all)	Black (OpenSAFELY)		0.660385	0.52305	0.83378
+Ethnicity (ref. white in all)	Other (OpenSAFELY)		0.78144	0.594893	1.026484
+No higher education (ref. degree attained)	LS meta-analysis	8	0.947139039	0.791482205	1.13340812
+Index of multiple deprivation	Per 1 IMD point (LS meta-analysis)	8	0.987404447	0.946705903	1.029852608
+Index of multiple deprivation	Quintile 2 vs. 1 (OpenSAFELY)		1.205923	1.09425	1.328992
+Index of multiple deprivation	Quintile 3 vs. 1 (OpenSAFELY)		1.425331	1.295933	1.567649
+Index of multiple deprivation	Quintile 4 vs. 1 (OpenSAFELY)		1.360971	1.233505	1.501609
+Index of multiple deprivation	Quintile 5 vs. 1 (OpenSAFELY)		1.401076	1.266314	1.550181
+Current smoking	LS meta-analysis	8	0.954934852	0.729652522	1.249773755
+Poor overall health	LS meta-analysis	7	1.618541254	1.254085056	2.088913967
+Poor overall health	OpenSAFELY		1.263372	1.180163	1.352447
+Psychological distress	LS meta-analysis	9	1.458962454	1.165676448	1.826039674
+Psychological distress	OpenSAFELY		1.56901	1.469692	1.675039
+Overweight or obesity	LS meta-analysis	8	1.239850663	1.005370512	1.529018056
+Overweight and obesity	OpenSAFELY		1.307925	1.207052	1.417228
+Diabetes	LS meta-analysis	6	1.378483178	0.851048234	2.232794567
+Diabetes	OpenSAFELY		1.049482	0.952697	1.156099
+Hypertension	LS meta-analysis	5	1.177688631	0.892526248	1.553960475
+High cholesterol	LS meta-analysis	2	1.330861171	0.889080325	1.992161347
+Asthma	LS meta-analysis	8	1.310463398	1.057405563	1.624082922
+Asthma	OpenSAFELY		1.561	1.455489	1.67416

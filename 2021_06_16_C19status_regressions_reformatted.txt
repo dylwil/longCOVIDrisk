@@ -1,0 +1,142 @@
+cohort	outcome	Ref	exposure	adjustments	Grouping	Order	coef	coef_se	lower_ci	upper_ci	n
+TwinsUK	yes (suspected or tested C19)	no C19	sex(femalevmale)	"model3(age, ethnicity)"	Sex	15	1.1301745	0.129040413	0.8826122	1.4646622	5290
+TwinsUK	yes (suspected or tested C19)	no C19	age(45-69+vs18-44)	"model3(age, ethnicity)"	Age	14	0.6989071	0.09615185	0.5794036	0.8447814	5292
+TwinsUK	yes (suspected or tested C19)	no C19	age(70+vs18-44)	"model3(sex, ethnicity)"	Age	13	0.3425074	0.12241971	0.2688771	0.4346451	5292
+TwinsUK	yes (suspected or tested C19)	no C19	eth(ethminorityvswhite)	"model2(sex, age)"	Ethnicity	12	0.8965431	0.229749746	0.558754	1.3804139	5289
+TwinsUK	yes (suspected or tested C19)	no C19	edu(no degreevsdegree)	"model3(age, sex, ethnicity)"	Education	11	0.7617814	0.104186694	0.6204435	0.9336088	4284
+TwinsUK	yes (suspected or tested C19)	no C19	IMD	"model3(age, sex, ethnicity)"	SEP	10	0.9577191	0.033021237	0.8979334	1.0220676	5250
+TwinsUK	yes (suspected or tested C19)	no C19	s-r health(poorvsgood)	"model3(age, sex, ethnicity)"	Gen_health	9	1.3527287	0.16470264	0.97019887	1.8527419	3407
+TwinsUK	yes (suspected or tested C19)	no C19	pre-pandemic mh score	"model3(age, sex, ethnicity)"	M_Health_cont	8	1.12265955	0.060514234	0.99733136	1.2644456	2911
+TwinsUK	yes (suspected or tested C19)	no C19	pre-pandemic mh (casevscontrol)	"model3(age, sex, ethnicity)"	M_Health_binary	7	1.165451	0.22938133	0.727988322	1.7952785	2824
+TwinsUK	yes (suspected or tested C19)	no C19	bmi score	"model3(age, sex, ethnicity)"	BMI	6	1.0122733	0.011486203	0.9893653	1.0349663	3019
+TwinsUK	yes (suspected or tested C19)	no C19	bmi (overweight/obesevsnormal)	"model3(age, sex, ethnicity)"	Overweight_obese	5	1.1250785	0.119713978	0.890252	1.4238647	3019
+TwinsUK	yes (suspected or tested C19)	no C19	diabetes (yesvsno)	"model3(age, sex, ethnicity)"	Diabetes	4	0.9168466	0.289687282	0.4977341	1.5631706	3594
+TwinsUK	yes (suspected or tested C19)	no C19	hypertention (yesvsno)	"model3(age, sex, ethnicity)"	Hypertension	3	0.8841634	0.129645856	0.6829947	1.1359461	4066
+TwinsUK	yes (suspected or tested C19)	no C19	cholesterol (yesvsno)	"model3(age, sex, ethnicity)"	Cholesterol	2	0.9518809	0.121061467	0.7488325	1.204143	4091
+TwinsUK	yes (suspected or tested C19)	no C19	smoking (yesvsno)	"model3(age, sex, ethnicity)"	Smoking	1	1.1129407	0.123956257	0.8685967	1.4127221	5245
+GS	yes (suspected or tested C19)	no C19	sex (femalevmale)	"model3(age, sex, ethnicity)"	Sex	15	0.93301615	0.121806061	0.736115779	1.187108474	3108
+GS	yes (suspected or tested C19)	no C19	age (45-69+vs18-44)	"model3(age, sex, ethnicity)"	Age	14	0.741524066	0.165791389	0.539770758	1.035098886	2409
+GS	yes (suspected or tested C19)	no C19	age (70+vs18-44)	"model3(age, sex, ethnicity)"	Age	13	0.243308248	0.243445583	0.149574709	0.389707447	1030
+GS	yes (suspected or tested C19)	no C19	eth (ethminorityvwhite)	"model3(age, sex, ethnicity)"	Ethnicity	12	2.183339339	0.515974645	0.709733499	5.611678737	3108
+GS	yes (suspected or tested C19)	no C19	edu (degreevnodegree)	"model3(age, sex, ethnicity)"	Education	11	0.979869863	0.118739801	0.776441032	1.237093653	3079
+GS	yes (suspected or tested C19)	no C19	social class (RoutineNEvsProfManInt)	"model3(age, sex, ethnicity)"	Social_class	10	1.196360223	0.187641506	0.818072801	1.71016535	2314
+GS	yes (suspected or tested C19)	no C19	SIMD	"model3(age, sex, ethnicity)"	SEP	9	0.952395487	0.022285001	0.912000414	0.995314845	3108
+GS	yes (suspected or tested C19)	no C19	prepandemic mh score NO SOMATIC SUBSCALE	"model3(age, sex, ethnicity)"	M_Health_cont	8	1.022303454	0.010288906	1.001270918	1.042608215	2504
+GS	yes (suspected or tested C19)	no C19	pre-pandemic mh (casevscontrol)	"model3(age, sex, ethnicity)"	M_Health_binary	7	1.322038657	0.184194964	0.910929288	1.878481886	2503
+GS	yes (suspected or tested C19)	no C19	bmi score	"model3(age, sex, ethnicity)"	BMI	6	1.017706641	0.01211835	0.993303866	1.041708298	2496
+GS	yes (suspected or tested C19)	no C19	bmi (overweight/obesevsnormal)	"model3(age, sex, ethnicity)"	Overweight_obese	5	1.261336048	0.133436854	0.972708825	1.641961896	2472
+GS	yes (suspected or tested C19)	no C19	diabetes (yesvsno)	"model3(age, sex, ethnicity)"	Diabetes	4	1.585791611	0.421370146	0.637956697	3.412173815	2505
+GS	yes (suspected or tested C19)	no C19	hypertension (yesvsno)	"model3(age, sex, ethnicity)"	Hypertension	3	0.699879398	0.230615004	0.434637015	1.077694455	2505
+GS	yes (suspected or tested C19)	no C19	asthma (yesvsno)	"model3(age, sex, ethnicity)"	Asthma	2	1.581013265	0.179062539	1.102391413	2.227363992	2505
+GS	yes (suspected or tested C19)	no C19	smoking (yesvsno)	"model3(age, sex, ethnicity)"	Smoking	1	1.055143491	0.254518021	0.621959335	1.695920304	3108
+ALSPAC G1	yes (suspected or tested C19)	no C19	sex(femalevmale)	"model3(age, sex, ethnicity)"	Sex	14	1.009853293	0.078900353	0.86646989	1.176963777	4121
+ALSPAC G1	yes (suspected or tested C19)	no C19	eth(ethminorityvswhite)	"model3(age, sex, ethnicity)"	Ethnicity	13	0.872694295	0.166840569	0.599971367	1.269386131	4121
+ALSPAC G1	yes (suspected or tested C19)	no C19	edu(no degreevsdegree)	"model3(age, sex, ethnicity)"	Education	12	0.9205913	0.084115968	0.769646247	1.101140094	3098
+ALSPAC G1	yes (suspected or tested C19)	no C19	IMD	"model3(age, sex, ethnicity)"	SEP	11	0.986835024	0.030121873	0.929528522	1.047674539	3823
+ALSPAC G1	yes (suspected or tested C19)	no C19	s-r health(poorvsgood)	"model3(age, sex, ethnicity)"	Gen_health	10	0.815174975	0.128094108	0.599094904	1.109190272	3318
+ALSPAC G1	yes (suspected or tested C19)	no C19	pre-pandemic mh score	"model3(age, sex, ethnicity)"	M_Health_cont	9	1.021637363	0.044635252	0.937794848	1.112975725	2964
+ALSPAC G1	yes (suspected or tested C19)	no C19	pre-pandemic mh (casevscontrol)	"model3(age, sex, ethnicity)"	M_Health_binary	8	1.060318707	0.107105839	0.869869514	1.292464838	2964
+ALSPAC G1	yes (suspected or tested C19)	no C19	bmi score	"model3(age, sex, ethnicity)"	BMI	7	1.010324041	0.008456381	0.993885047	1.027034939	2752
+ALSPAC G1	yes (suspected or tested C19)	no C19	bmi (overweight/obesevsnormal)	"model3(age, sex, ethnicity)"	Overweight_obese	6	1.072278538	0.097916846	0.896558784	1.282438233	2669
+ALSPAC G1	yes (suspected or tested C19)	no C19	diabetes (yesvsno)	"model3(age, sex, ethnicity)"	Diabetes	5	0.477767482	0.363604763	0.107500373	2.123357905	2765
+ALSPAC G1	yes (suspected or tested C19)	no C19	hypertention (yesvsno)	"model3(age, sex, ethnicity)"	Hypertension	4	1.229103363	0.406379415	0.642917088	2.349751009	2759
+ALSPAC G1	yes (suspected or tested C19)	no C19	cholesterol (yesvsno)	"model3(age, sex, ethnicity)"	Cholesterol	3	1.009027001	1.166123229	0.104755538	9.719156732	2644
+ALSPAC G1	yes (suspected or tested C19)	no C19	asthma (yesvsno)	"model3(age, sex, ethnicity)"	Asthma	2	1.10937158	0.111454379	0.911087372	1.350809308	2756
+ALSPAC G1	yes (suspected or tested C19)	no C19	smoking (yesvsno)	"model3(age, sex, ethnicity)"	Smoking	1	1.030405718	0.123248472	0.815069581	1.302632275	3225
+ALSPAC G0	yes (suspected or tested C19)	no C19	sex(femalevmale)	"model3(age, sex, ethnicity)"	Sex	16	1.040741633	0.10147563	0.859702246	1.259904987	4177
+ALSPAC G0	yes (suspected or tested C19)	no C19	age(55-59+vs45-54)	"model3(age, sex, ethnicity)"	Age	15	0.9532806	0.113095	0.7555029	1.202833	4177
+ALSPAC G0	yes (suspected or tested C19)	no C19	age(60-76+vs45-54)	"model3(age, sex, ethnicity)"	Age	14	0.6154806	0.075647	0.4837217	0.7831288	4177
+ALSPAC G0	yes (suspected or tested C19)	no C19	eth(ethminorityvswhite)	"model3(age, sex, ethnicity)"	Ethnicity	13	1.011555041	0.302074016	0.563379203	1.816260871	4177
+ALSPAC G0	yes (suspected or tested C19)	no C19	edu(no degreevsdegree)	"model3(age, sex, ethnicity)"	Education	12	1.105778586	0.110886215	0.908470136	1.345939985	3995
+ALSPAC G0	yes (suspected or tested C19)	no C19	IMD	"model3(age, sex, ethnicity)"	SEP	11	0.999566245	0.037086908	0.929457315	1.074963489	3819
+ALSPAC G0	yes (suspected or tested C19)	no C19	s-r health(poorvsgood)	"model3(age, sex, ethnicity)"	Gen_health	10	1.442261979	0.208816094	1.085935437	1.915509474	3316
+ALSPAC G0	yes (suspected or tested C19)	no C19	pre-pandemic mh score	"model3(age, sex, ethnicity)"	M_Health_cont	9	1.101804055	0.050216996	1.00764858	1.20475749	3339
+ALSPAC G0	yes (suspected or tested C19)	no C19	pre-pandemic mh (casevscontrol)	"model3(age, sex, ethnicity)"	M_Health_binary	8	1.145981415	0.143855049	0.896037619	1.465645389	3339
+ALSPAC G0	yes (suspected or tested C19)	no C19	bmi score	"model3(age, sex, ethnicity)"	BMI	7	1.02451682	0.010554671	1.004037496	1.045413859	2690
+ALSPAC G0	yes (suspected or tested C19)	no C19	bmi (overweight/obesevsnormal)	"model3(age, sex, ethnicity)"	Overweight_obese	6	1.284541958	0.140308961	1.036985257	1.591197205	2665
+ALSPAC G0	yes (suspected or tested C19)	no C19	diabetes (yesvsno)	"model3(age, sex, ethnicity)"	Diabetes	5	0.616122311	0.209489402	0.316408114	1.199737568	3319
+ALSPAC G0	yes (suspected or tested C19)	no C19	hypertention (yesvsno)	"model3(age, sex, ethnicity)"	Hypertension	4	1.164723508	0.138033306	0.923305752	1.469265027	3484
+ALSPAC G0	yes (suspected or tested C19)	no C19	cholesterol (yesvsno)	"model3(age, sex, ethnicity)"	Cholesterol	3	0.967022807	0.156083131	0.704770659	1.326861581	2619
+ALSPAC G0	yes (suspected or tested C19)	no C19	asthma (yesvsno)	"model3(age, sex, ethnicity)"	Asthma	2	1.344700584	0.165957164	1.055781285	1.71268395	3304
+ALSPAC G0	yes (suspected or tested C19)	no C19	smoking (yesvsno)	"model3(age, sex, ethnicity)"	Smoking	1	1.416315691	0.13150135	1.180668956	1.698994564	3651
+USoc	yes (suspected C19 symptoms)	no C19	sex(femalevmale)	"model3(age, ethnicity)"	Sex	13	1.269619	0.129397	1.039591	1.550545	11660
+USoc	yes (suspected C19 symptoms)	no C19	eth(ethminorityvswhite)	"model3(age, sex)"	Ethnicity	12	1.350328	0.321332	0.846733	2.153436	11660
+USoc	yes (suspected C19 symptoms)	no C19	age(45-69+vs18-44)	"model3(sex, ethnicity)"	Age	11	0.695034	0.078917	0.556278	0.868401	11660
+USoc	yes (suspected C19 symptoms)	no C19	age(70+vs18-44)	"model3(sex, ethnicity)"	Age	10	0.235081	0.034408	0.17642	0.313248	11660
+USoc	yes (suspected C19 symptoms)	no C19	edu(no degreevsdegree)	"model3(age, sex, ethnicity)"	Education	9	0.692114	0.07661	0.557046	0.859931	10660
+USoc	yes (suspected C19 symptoms)	no C19	s-r health(poorvsgood)	"model3(age, sex, ethnicity)"	Gen_health	8	1.24151	0.167187	0.953337	1.616791	11648
+USoc	yes (suspected C19 symptoms)	no C19	pre-pandemic mh score	"model3(age, sex, ethnicity)"	M_Health_cont	7	1.141489	0.057377	1.034325	1.259755	11656
+USoc	yes (suspected C19 symptoms)	no C19	pre-pandemic mh (casevscontrol)	"model3(age, sex, ethnicity)"	M_Health_binary	6	1.525738	0.185574	1.201931	1.936782	11656
+USoc	yes (suspected C19 symptoms)	no C19	diabetes (yesvsno)	"model3(age, sex, ethnicity)"	Diabetes	5	1.348034	0.311927	0.856259	2.122249	11660
+USoc	yes (suspected C19 symptoms)	no C19	hypertension (yesvsno)	"model3(age, sex, ethnicity)"	Hypertension	4	1.107211	0.136973	0.868675	1.411249	11660
+USoc	yes (suspected C19 symptoms)	no C19	asthma (yesvsno)	"model3(age, sex, ethnicity)"	Asthma	3	1.244908	0.17838	0.939914	1.648868	11660
+USoc	yes (suspected C19 symptoms)	no C19	social class (RoutineNEvsProfManInt)	"model3(age, sex, ethnicity)"	Social_class	2	0.702856	0.079476	0.563057	0.877366	11647
+USoc	yes (suspected C19 symptoms)	no C19	smoking (yesvsno)	"model3(age, sex, ethnicity)"	Smoking	1	1.139258	0.229872	0.766932	1.692338	11660
+NCDS	yes (suspected or tested C19)	no C19	sex (femalevmale)	"model3(age,ethnicity)"	Sex	12	0.971693713	0.138871477	0.734308045	1.285820957	6270
+NCDS	yes (suspected or tested C19)	no C19	ethnicity (ethminorityvwhite)	"model3(age,sex)"	Ethnicity	11	1.676374599	0.679702797	0.75725634	3.711070672	6270
+NCDS	yes (suspected or tested C19)	no C19	education (nodegreevdegree)	"model3(age,sex,ethnicity)"	Education	10	1.094649473	0.148935761	0.838421367	1.429182887	6270
+NCDS	yes (suspected or tested C19)	no C19	IMD	"model3(age,sex,ethnicity)"	SEP	9	0.972975172	0.022514741	0.929832819	1.018119242	5871
+NCDS	yes (suspected or tested C19)	no C19	s-r health(poorvsgood)	"model3(age,sex,ethnicity)"	Gen_health	8	1.069441728	0.183653342	0.763803749	1.49738151	5908
+NCDS	yes (suspected or tested C19)	no C19	pre-pandemic mh (casevscontrol)	"model3(age,sex,ethnicity)"	M_Health_binary	7	0.850799899	0.146474565	0.607132831	1.192260462	5857
+NCDS	yes (suspected or tested C19)	no C19	bmi (continuous)	"model3(age,sex,ethnicity)"	BMI	6	1.039593416	0.015927757	1.008839648	1.071284691	5584
+NCDS	yes (suspected or tested C19)	no C19	bmi (overweight/obesevsnormal)	"model3(age,sex,ethnicity)"	Overweight_obese	5	1.438719289	0.203901584	1.089783088	1.899380908	5584
+NCDS	yes (suspected or tested C19)	no C19	diabetes	"model3(age,sex,ethnicity)"	Diabetes	4	1.640863378	0.46584085	0.940624835	2.862387348	5900
+NCDS	yes (suspected or tested C19)	no C19	hypertension	"model3(age,sex,ethnicity)"	Hypertension	3	1.228891777	0.190257659	0.907256683	1.664550978	5899
+NCDS	yes (suspected or tested C19)	no C19	asthma	"model3(age,sex,ethnicity)"	Asthma	2	0.697957538	0.119500596	0.498988778	0.97626389	5900
+NCDS	yes (suspected or tested C19)	no C19	smoker	"model3(age,sex,ethnicity)"	Smoking	1	0.574246084	0.114280101	0.388777686	0.848193138	5368
+BCS70	yes (suspected or tested C19)	no C19	sex (femalevmale)	"model3(age,ethnicity)"	Sex	11	0.979761688	0.117491139	0.774543831	1.23935267	4965
+BCS70	yes (suspected or tested C19)	no C19	ethnicity (ethminorityvwhite)	"model3(age,sex)"	Ethnicity	10	1.885263759	0.660615112	0.948642679	3.746636665	4965
+BCS70	yes (suspected or tested C19)	no C19	education (nodegreevdegree)	"model3(age,sex,ethnicity)"	Education	9	0.996365415	0.115065926	0.794542377	1.249453861	4944
+BCS70	yes (suspected or tested C19)	no C19	IMD	"model3(age,sex,ethnicity)"	SEP	8	0.972392225	0.022417442	0.929432715	1.017337376	4446
+BCS70	yes (suspected or tested C19)	no C19	s-r health(poorvsgood)	"model3(age,sex,ethnicity)"	Gen_health	7	0.890607204	0.152027533	0.637360664	1.244477793	4460
+BCS70	yes (suspected or tested C19)	no C19	pre-pandemic mh (casevscontrol)	"model3(age,sex,ethnicity)"	M_Health_binary	6	0.906330383	0.153446778	0.65038929	1.262989377	4237
+BCS70	yes (suspected or tested C19)	no C19	bmi (continuous)	"model3(age,sex,ethnicity)"	BMI	5	1.011755299	0.014282199	0.984146398	1.040138731	4073
+BCS70	yes (suspected or tested C19)	no C19	bmi (overweight/obesevsnormal)	"model3(age,sex,ethnicity)"	Overweight_obese	4	1.109247346	0.16787688	0.824527144	1.492285223	4073
+BCS70	yes (suspected or tested C19)	no C19	diabetes	"model3(age,sex,ethnicity)"	Diabetes	3	0.996819519	0.334042332	0.516858866	1.922476752	4461
+BCS70	yes (suspected or tested C19)	no C19	asthma	"model3(age,sex,ethnicity)"	Asthma	2	0.854494716	0.153110618	0.601435201	1.214031401	4461
+BCS70	yes (suspected or tested C19)	no C19	smoker	"model3(age,sex,ethnicity)"	Smoking	1	0.641321532	0.100122941	0.472265773	0.870893746	3974
+Next Steps	yes (suspected or tested C19)	no C19	age (cont)	"model3(sex,ethnicity)"	Age	10	0.950417902	0.233051007	0.587185513	1.538345495	3677
+Next Steps	yes (suspected or tested C19)	no C19	sex (femalevmale)	"model3(age,ethnicity)"	Sex	9	1.194782289	0.185884165	0.880226218	1.621747556	3677
+Next Steps	yes (suspected or tested C19)	no C19	ethnicity (ethminorityvwhite)	"model3(age,sex)"	Ethnicity	8	1.590511789	0.26391495	1.148190955	2.203229123	3677
+Next Steps	yes (suspected or tested C19)	no C19	education (nodegreevdegree)	"model3(age,sex,ethnicity)"	Education	7	0.886097378	0.133625664	0.658964024	1.191519619	3673
+Next Steps	yes (suspected or tested C19)	no C19	IMD	"model3(age,sex,ethnicity)"	SEP	6	0.987851025	0.027633698	0.935045522	1.043638651	3669
+Next Steps	yes (suspected or tested C19)	no C19	s-r health(poorvsgood)	"model3(age,sex,ethnicity)"	Gen_health	5	0.726695237	0.199382007	0.423977074	1.245553119	3632
+Next Steps	yes (suspected or tested C19)	no C19	pre-pandemic mh (casevscontrol)	"model3(age,sex,ethnicity)"	M_Health_binary	4	0.709423616	0.128739172	0.496739137	1.013171361	3605
+Next Steps	yes (suspected or tested C19)	no C19	bmi (continuous)	"model3(age,sex,ethnicity)"	BMI	3	1.006243659	0.01304496	0.98094805	1.032191562	3476
+Next Steps	yes (suspected or tested C19)	no C19	bmi (overweight/obesevsnormal)	"model3(age,sex,ethnicity)"	Overweight_obese	2	1.018515514	0.153972753	0.75688517	1.370582876	3476
+Next Steps	yes (suspected or tested C19)	no C19	smoker	"model3(age,sex,ethnicity)"	Smoking	1	0.688988218	0.10964825	0.504043947	0.941792413	2747
+MCS	yes (suspected or tested C19)	no C19	age (cont)	"model3(sex,ethnicity)"	Age	10	1.50530751	0.26586833	1.063692948	2.130267672	4207
+MCS	yes (suspected or tested C19)	no C19	sex (femalevmale)	"model3(age,ethnicity)"	Sex	9	1.008769041	0.124677938	0.791151916	1.286244724	4207
+MCS	yes (suspected or tested C19)	no C19	ethnicity (ethminorityvwhite)	"model3(age,sex)"	Ethnicity	8	1.063250194	0.150521506	0.804928009	1.404474641	4207
+MCS	yes (suspected or tested C19)	no C19	education (nodegreevdegree)	"model3(age,sex,ethnicity)"	Education	7	0.659543457	0.079279578	0.520722674	0.835372826	4088
+MCS	yes (suspected or tested C19)	no C19	IMD	"model3(age,sex,ethnicity)"	SEP	6	1.065984531	0.025742853	1.016554735	1.117817842	4071
+MCS	yes (suspected or tested C19)	no C19	pre-pandemic mh (casevscontrol)	"model3(age,sex,ethnicity)"	M_Health_binary	5	0.818508778	0.152349969	0.567665466	1.180196191	3946
+MCS	yes (suspected or tested C19)	no C19	bmi (continuous)	"model3(age,sex,ethnicity)"	BMI	4	0.988929607	0.011731846	0.96613076	1.012266464	3858
+MCS	yes (suspected or tested C19)	no C19	bmi (overweight/obesevsnormal)	"model3(age,sex,ethnicity)"	Overweight_obese	3	0.796200249	0.109023299	0.608280566	1.042175062	3858
+MCS	yes (suspected or tested C19)	no C19	asthma	"model3(age,sex,ethnicity)"	Asthma	2	1.012315407	0.184337914	0.707672402	1.448102938	3635
+MCS	yes (suspected or tested C19)	no C19	smoker	"model3(age,sex,ethnicity)"	Smoking	1	1.590828158	0.253436238	1.163006167	2.17602821	2381
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
