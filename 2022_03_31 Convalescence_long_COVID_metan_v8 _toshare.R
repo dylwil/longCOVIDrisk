@@ -127,7 +127,7 @@ levels(res_4w_cohorts_health$Group_labs) = c("Poor overall health", "Psychologic
   # M-A of 4+ week demography res from cohorts:
 
 
-setwd("C:/Users/rmgpdmw/OneDrive - University College London/Projects/COVID/LHW programme in the NCS/ARQ2 - long COVID/Output/Plots/Test of final script to share")
+setwd("C:/Users/rmgpdmw/OneDrive - University College London/Projects/COVID/LHW programme in the NCS/ARQ2 - long COVID/Output/Test of final script to share")
 
 attach(res_4w_cohorts_demog)
 
@@ -141,7 +141,7 @@ meta_4w_cohorts_demog <-metagen(log(coef),
 
 summary(meta_4w_cohorts_demog)
 
-tiff("v8_4plus_model2_demog.tiff", width = 300, height = 380, units = "mm", res = 100)
+pdf("v8_4plus_model2_demog.pdf", width = 11, height = 14)
 forest(meta_4w_cohorts_demog, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -165,7 +165,8 @@ forest(meta_4w_cohorts_demog,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off() 
 
 detach(res_4w_cohorts_demog)
@@ -194,7 +195,7 @@ meta_4w_cohorts_health <-metagen(log(coef),
 
 
     # Plot
-tiff("v8_4plus_model2_health.tiff", width = 300, height = 600, units = "mm", res = 150)
+pdf("v8_4plus_model2_health.pdf", width = 11, height = 20)
 forest(meta_4w_cohorts_health, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -220,7 +221,8 @@ forest(meta_4w_cohorts_health,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off() 
 
 detach(res_4w_cohorts_health)
@@ -286,7 +288,7 @@ meta_12w_cohorts_demog <-metagen(log(coef),
 
 summary(meta_12w_cohorts_demog)
 
-tiff("v8_12plus_model2_demog.tiff", width = 300, height = 360, units = "mm", res = 100)
+pdf("v8_12plus_model2_demog.pdf", width = 11, height = 14)
 forest(meta_12w_cohorts_demog, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -310,7 +312,8 @@ forest(meta_12w_cohorts_demog,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off()
 
 detach(res_12w_cohorts_demog)
@@ -341,7 +344,7 @@ meta_12w_cohorts_health <- metagen(log(coef),
 
 summary(meta_12w_cohorts_health)
 
-tiff("v8_12plus_model2_health.tiff", width = 300, height = 600, units = "mm", res = 150)
+pdf("v8_12plus_model2_health.pdf", width = 11, height = 20)
 forest(meta_12w_cohorts_health, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -365,7 +368,8 @@ forest(meta_12w_cohorts_health,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off()
 
 detach(res_12w_cohorts_health)
@@ -439,7 +443,7 @@ meta_4w_age <- metagen(log(coef),
                                    subgroup = Group_labs, 
                                    sm = "OR")
 
-tiff("v8_4plus_ageonly.tiff", width = 280, height = 250, units = "mm", res = 100)
+pdf("v8_4plus_ageonly.pdf", width = 9, height = 7)
 forest(meta_4w_age, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -467,7 +471,8 @@ forest(meta_4w_age,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       hetstat = FALSE)
+       hetstat = FALSE,
+       digits.pval.Q = 3)
 dev.off()
 
 detach(res_age_4w)
@@ -521,7 +526,7 @@ meta_12w_age <- metagen(log(coef),
                        subgroup = Group_labs, 
                        sm = "OR")
 
-tiff("v8_12plus_ageonly.tiff", width = 280, height = 250, units = "mm", res = 100)
+pdf("v8_12plus_ageonly.pdf", width = 9, height = 7)
 forest(meta_12w_age, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -549,7 +554,8 @@ forest(meta_12w_age,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       hetstat = FALSE)
+       hetstat = FALSE,
+       digits.pval.Q = 3)
 dev.off()
 
 detach(res_age_12w)
@@ -567,6 +573,16 @@ res = rename(res, Study = cohort, se = coef_se, lci = lower_ci, uci = upper_ci, 
 # Adding log-odds to data:
 
 res = res %>% mutate(logodds = log(coef))
+
+# Changing BMI coefficients to be per 5kg
+
+res = res %>% 
+  mutate(logodds = ifelse(Grouping == "BMI", logodds*5, logodds)) %>%
+  mutate(coef = ifelse(Grouping == "BMI", exp(logodds), coef)) %>%
+  mutate(lci = ifelse(Grouping == "BMI", exp(logodds - (1.96*5*se)), lci)) %>%
+  mutate(uci = ifelse(Grouping == "BMI", exp(logodds + (1.96*5*se)), uci))
+
+
 
 
 # Removing education results for MCS (probably not meaningful because not all students are old enough to have completed degree):
@@ -636,7 +652,7 @@ meta_c19_demog <-metagen(log(coef),
                                 title = n)
 summary(meta_c19_demog)
 
-tiff("v8_C19_model3_demog.tiff", width = 300, height = 450, units = "mm", res = 100)
+pdf("v8_C19_model3_demog.pdf", width = 11, height = 17)
 forest(meta_c19_demog, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -660,7 +676,8 @@ forest(meta_c19_demog,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off() 
 
 detach(res_c19_demog)
@@ -688,7 +705,7 @@ meta_c19_health <-metagen(log(coef),
 
 summary(meta_c19_health)
 
-tiff("v8_C19_model3_health.tiff", width = 300, height = 600, units = "mm", res = 100)
+pdf("v8_C19_model3_health.pdf", width = 11, height = 24)
 forest(meta_c19_health, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -712,7 +729,8 @@ forest(meta_c19_health,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off() 
 
 detach(res_c19_health)
@@ -751,7 +769,7 @@ meta_all <- metagen(log(or),
                     title = k)
 summary(meta_all)
 
-tiff("v8_model2_overall_forest.tiff", width = 300, height = 380, units = "mm", res = 100)
+pdf("v8_model2_overall_forest.pdf", width = 13, height = 12)
 forest(meta_all, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -779,7 +797,8 @@ forest(meta_all,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       at=c(0.5,0.75,1,1.5,2))
+       at=c(0.5,0.75,1,1.5,2),
+       digits.pval.Q = 3)
 dev.off()
 
 
@@ -897,7 +916,7 @@ meta_4w_cohorts_demog <-metagen(log(coef),
 
 summary(meta_4w_cohorts_demog)
 
-tiff("v8_IPW_4plus_model2_demog.tiff", width = 300, height = 380, units = "mm", res = 100)
+pdf("v8_IPW_4plus_model2_demog.pdf", width = 11, height = 15)
 forest(meta_4w_cohorts_demog, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -921,7 +940,8 @@ forest(meta_4w_cohorts_demog,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off() 
 
 detach(res_4w_cohorts_demog)
@@ -953,7 +973,7 @@ summary(meta_4w_cohorts_health)
 
 
 # Plot
-tiff("v8_IPW_4plus_model2_health.tiff", width = 300, height = 600, units = "mm", res = 100)
+pdf("v8_IPW_4plus_model2_health.pdf", width = 11, height = 20)
 forest(meta_4w_cohorts_health, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -977,7 +997,8 @@ forest(meta_4w_cohorts_health,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off() 
 
 detach(res_4w_cohorts_health)
@@ -1046,7 +1067,7 @@ meta_12w_cohorts_demog <-metagen(log(coef),
 
 summary(meta_12w_cohorts_demog)
 
-tiff("v8_IPW_12plus_model2_demog.tiff", width = 300, height = 360, units = "mm", res = 100)
+pdf("v8_IPW_12plus_model2_demog.pdf", width = 11, height = 14)
 forest(meta_12w_cohorts_demog, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -1070,7 +1091,8 @@ forest(meta_12w_cohorts_demog,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off()
 
 detach(res_12w_cohorts_demog)
@@ -1101,7 +1123,7 @@ meta_12w_cohorts_health <- metagen(log(coef),
 
 summary(meta_12w_cohorts_health)
 
-tiff("v8_IPW_12plus_model2_health.tiff", width = 300, height = 600, units = "mm", res = 100)
+pdf("v8_IPW_12plus_model2_health.pdf", width = 11, height = 20)
 forest(meta_12w_cohorts_health, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -1125,7 +1147,8 @@ forest(meta_12w_cohorts_health,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off()
 
 detach(res_12w_cohorts_health)
@@ -1198,7 +1221,7 @@ meta_4w_age <- metagen(log(coef),
                        subgroup = Group_labs, 
                        sm = "OR")
 
-tiff("v8_IPW_4plus_ageonly.tiff", width = 280, height = 250, units = "mm", res = 100)
+pdf("v8_IPW_4plus_ageonly.pdf", width = 9, height = 6)
 forest(meta_4w_age, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -1225,7 +1248,8 @@ forest(meta_4w_age,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       hetstat = FALSE)
+       hetstat = FALSE,
+       digits.pval.Q = 3)
 dev.off()
 
 detach(res_age_4w)
@@ -1277,7 +1301,7 @@ meta_12w_age <- metagen(log(coef),
                         subgroup = Group_labs, 
                         sm = "OR")
 
-tiff("v8_IPW_12plus_ageonly.tiff", width = 280, height = 250, units = "mm", res = 100)
+pdf("v8_IPW_12plus_ageonly.pdf", width = 10, height = 7)
 forest(meta_12w_age, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -1304,7 +1328,8 @@ forest(meta_12w_age,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       hetstat = FALSE)
+       hetstat = FALSE,
+       digits.pval.Q = 3)
 dev.off()
 
 detach(res_age_12w)
@@ -1407,7 +1432,7 @@ meta_4w_cohorts_demog <-metagen(log(coef),
 
 summary(meta_4w_cohorts_demog)
 
-tiff("v8_4plus_seroPCRpos_subgroup_model3_demog.tiff", width = 300, height = 240, units = "mm", res = 100)
+pdf("v8_4plus_seroPCRpos_subgroup_model3_demog.pdf", width = 10, height = 9)
 forest(meta_4w_cohorts_demog, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -1431,7 +1456,8 @@ forest(meta_4w_cohorts_demog,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off() 
 
 detach(res_4w_cohorts_demog)
@@ -1463,7 +1489,7 @@ summary(meta_4w_cohorts_health)
 
 
 # Plot
-tiff("v8_4plus_seroPCRpos_subgroup_model3_health.tiff", width = 300, height = 300, units = "mm", res = 100)
+pdf("v8_4plus_seroPCRpos_subgroup_model3_health.pdf", width = 10, height = 12)
 forest(meta_4w_cohorts_health, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -1489,7 +1515,8 @@ forest(meta_4w_cohorts_health,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off() 
 
 detach(res_4w_cohorts_health)
@@ -1552,7 +1579,7 @@ meta_12w_cohorts_demog <-metagen(log(coef),
 
 summary(meta_12w_cohorts_demog)
 
-tiff("v8_12plus_seroPCRpos_subgroup_model3_demog.tiff", width = 300, height = 240, units = "mm", res = 100)
+pdf("v8_12plus_seroPCRpos_subgroup_model3_demog.pdf", width = 11, height = 9)
 forest(meta_12w_cohorts_demog, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -1576,7 +1603,8 @@ forest(meta_12w_cohorts_demog,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off()
 
 detach(res_12w_cohorts_demog)
@@ -1607,7 +1635,7 @@ meta_12w_cohorts_health <- metagen(log(coef),
 
 summary(meta_12w_cohorts_health)
 
-tiff("v8_12plus_seroPCRpos_subgroup_model3_health.tiff", width = 300, height = 300, units = "mm", res = 100)
+pdf("v8_12plus_seroPCRpos_subgroup_model3_health.pdf", width = 11, height = 12)
 forest(meta_12w_cohorts_health, 
        overall = FALSE,
        overall.hetstat = FALSE,
@@ -1631,7 +1659,8 @@ forest(meta_12w_cohorts_health,
        label.test.subgroup.fixed = FALSE,
        label.test.subgroup.random = FALSE,
        print.subgroup.name = F, 
-       just = "right")
+       just = "right",
+       digits.pval.Q = 3)
 dev.off()
 
 detach(res_12w_cohorts_health)
